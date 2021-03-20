@@ -12,5 +12,8 @@
   "repository": "git://github.com/alextim/traslit.git",
   "bugs": {
     "url": "https://github.com/alextim/traslit/issues"
-  }  
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }    
 }
