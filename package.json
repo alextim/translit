@@ -13,6 +13,9 @@
   "bugs": {
     "url": "https://github.com/alextim/traslit/issues"
   },
+  "scripts": {
+    "test": "echo \"Write tests!\" && exit 0"
+  },  
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/"
   }    
