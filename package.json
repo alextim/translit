@@ -1,6 +1,6 @@
 {
-  "name": "@alextim/traslit",
-  "description": "traslit",
+  "name": "@alextim/translit",
+  "description": "translit",
   "version": "0.1.0",
   "license": "MIT",
   "author": "Oleksii Tymoshenko <buildmnt@gmail.com>",
@@ -8,10 +8,10 @@
     "js"
   ],
   "main": "index.js",
-  "homepage": "https://github.com/alextim/traslit",
-  "repository": "git://github.com/alextim/traslit.git",
+  "homepage": "https://github.com/alextim/translit",
+  "repository": "git://github.com/alextim/translit.git",
   "bugs": {
-    "url": "https://github.com/alextim/traslit/issues"
+    "url": "https://github.com/alextim/translit/issues"
   },
   "scripts": {
     "test": "echo \"Write tests!\" && exit 0"
