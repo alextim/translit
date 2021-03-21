@@ -1,7 +1,7 @@
 {
   "name": "@alextim/translit",
   "description": "translit",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "license": "MIT",
   "author": "Oleksii Tymoshenko <buildmnt@gmail.com>",
   "keywords": [
@@ -11,7 +11,7 @@
   "homepage": "https://github.com/alextim/translit",
   "bugs": {
     "url": "https://github.com/alextim/translit/issues"
-  },  
+  },
   "scripts": {
     "test": "echo \"Write tests!\" && exit 0"
   },
