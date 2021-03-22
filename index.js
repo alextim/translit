@@ -3,12 +3,14 @@ const ru = {
   и: 'i',
   й: 'j',
   ц: 'c',
+  х: 'h',
 };
 const uk = {
   г: 'h',
   и: 'y',
   й: 'i',
   ц: 'ts',
+  х: 'kh',
 };
 const common = {
   а: 'a',
@@ -33,7 +35,7 @@ const common = {
   т: 't',
   у: 'u',
   ф: 'f',
-  х: 'h',
+
   ч: 'ch',
   ш: 'sh',
   щ: 'shch',
@@ -50,6 +52,7 @@ const common = {
 
   ґ: 'g',
   "'": '',
+  "’": '',
 };
 
 const first = {
@@ -61,10 +64,12 @@ const first = {
 };
 
 const translit = (src, locale = 'uk') => {
+  if (locale !== 'uk' && locale !== 'ru') {
+    throw `Unsupported locale ${locale}`;
+  }
   if (!src) {
     return src;
   }
-
   let prepared = src.toLowerCase();
   let all;
 
