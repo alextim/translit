@@ -5,15 +5,15 @@ test('unsupported locale', () => {
 });
 
 test('undefined', () => {
-  expect(translit(undefined)).not.toBeDefined();
+  expect(translit(undefined, 'uk')).not.toBeDefined();
 });
 
 test('null', () => {
-  expect(translit(null)).toBeNull();
+  expect(translit(null, 'uk')).toBeNull();
 });
 
 test('empty', () => {
-  expect(translit('')).toBe('');
+  expect(translit('', 'uk')).toBe('');
 });
 
 const src = {
@@ -74,7 +74,13 @@ const src = {
 
 Object.keys(src).forEach((key) => {
   test(key, () => {
-    expect(translit(key)).toBe(src[key].toLowerCase());
+    expect(translit(key, 'uk')).toBe(src[key].toLowerCase());
   });
 });
 
+const srcRus = 'Иван Алексеев, известный под сценической кличкой Noize MC записал альбом с показательным названием «Неразбериха». Получилась питательная и где-то даже успокоительная смесь из хип-хопа, гранжа, регги и брейк-бита';
+const result = 'Ivan Alekseev, izvestnyi pod scenicheskoi klichkoi Noize MC zapisal albom s pokazatelnym nazvaniem «Nerazberiha». Poluchilas pitatelnaya i gde-to daje uspokoitelnaya smes iz hip-hopa, granja, reggi i breik-bita';
+
+test('Russian', () => {
+  expect(translit(srcRus, 'ru')).toBe(result.toLowerCase());
+});

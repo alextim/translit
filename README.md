@@ -6,4 +6,8 @@
 
 [ТАБЛИЦЯ транслітерації українського алфавіту латиницею](https://www.kmu.gov.ua/npas/243262567)
 
-*ru is not tested!*
+## usage
+
+```js
+const s = translit(source, locale);
+```

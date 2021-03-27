@@ -1,17 +1,25 @@
 const ru = {
   г: 'g',
+  ж: 'j',
   и: 'i',
-  й: 'j',
+  й: 'i',
   ц: 'c',
   х: 'h',
+  ю: 'u',
+  я: 'ya',
 };
+
 const uk = {
   г: 'h',
+  ж: 'zh',
   и: 'y',
   й: 'i',
   ц: 'ts',
   х: 'kh',
+  ю: 'iu',
+  я: 'ia',
 };
+
 const common = {
   а: 'a',
   б: 'b',
@@ -20,7 +28,6 @@ const common = {
   д: 'd',
   е: 'e',
   ё: 'e',
-  ж: 'zh',
 
   з: 'z',
 
@@ -47,8 +54,6 @@ const common = {
   є: 'ie',
   ї: 'i',
   і: 'i',
-  ю: 'iu',
-  я: 'ia',
 
   ґ: 'g',
   "'": '',
@@ -63,9 +68,9 @@ const first = {
   я: 'ya',
 };
 
-const translit = (src, locale = 'uk') => {
+const translit = (src, locale) => {
   if (locale !== 'uk' && locale !== 'ru') {
-    throw `Unsupported locale ${locale}`;
+    throw `Translit: unsupported default locale ${locale}`;
   }
   if (!src) {
     return src;
